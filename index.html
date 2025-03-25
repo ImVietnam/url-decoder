@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Decoder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>URL Decoder</h2>
+    <input type="text" id="encodedUrl" placeholder="Paste encoded URL here">
+    <button onclick="decodeUrl()">Decode</button>
+    <p>Decoded URL: <span id="decodedOutput"></span></p>
+
+    <script>
+        function decodeUrl() {
+            let input = document.getElementById("encodedUrl").value;
+            document.getElementById("decodedOutput").innerText = decodeURIComponent(input);
+        }
+    </script>
+</body>
+</html>
